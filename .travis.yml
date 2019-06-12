@@ -1,4 +1,5 @@
 ---
+dist: xenial
 install:
   - "pip install discord.py pytest pydocstyle"
 language: python
@@ -7,4 +8,9 @@ python:
 script:
   - pytest test_Goku.py
   - pydocstyle Goku.py
-
+notifications:
+  email:
+    recipients:
+      - user@example.com
+    on_success: always
+    on_failure: always
